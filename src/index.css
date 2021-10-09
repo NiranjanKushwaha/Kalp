@@ -1,13 +1,280 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container-fluid, .row, .col-12{
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.row>* {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.navbar{
+  overflow: hidden;
+  padding: 2rem 0.5rem;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  top: 0;
+  z-index: 99;
+}
+
+.navbar-brand{
+  margin-left: 2rem;
+  transition: 0.4s;
+}
+.navbar-nav{
+  margin-right: 5rem;
+}
+
+.navbar-toggler{
+  margin-right: 1rem;
+}
+.nav-link{
+  margin-left: 2rem;
+}
+.enquire_link{
+  cursor: pointer;
+  background-color: greenyellow;
+}
+
+.top-section{
+  width:100%;
+  height:37rem;
+  background-image: url("https://d2j4tkbto6uvqv.cloudfront.net/kalpataru/6130d8e089331.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.light-bg{
+  background: rgba(0,0,0,0.2);
+  padding:1rem 3rem;
+}
+.front-center-text{
+  display: grid;
+  place-items: center;
+  margin:0 auto;
+  width: fit-content;
+  margin-top: 25rem;
+}
+.front-center-text>*{
+  color: #fff;
+  text-align: center;
+}
+
+.price-location{
+  padding-top: 2.5rem;
+  display: flex;
+  justify-content:space-around;
+  width:90%;
+  margin: 0 auto;
+}
+.middle{
+  display: flex;
+  justify-content: space-between;
+}
+.middle>div{
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 800;
+}
+
+.middle-img{
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.overview{
+  margin-top: 12rem;
+  width:100%;
+}
+.overview h6{
+  margin-left:2rem;
+  margin-top: 2rem;
+}
+.overview >div{
+  height: 30rem;
+}
+
+.overview_leftPic>img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 70%;
+height: 25rem;
+}
+
+.overview_text{
+  font-size: 10rem;
+  opacity: 0.2;
+}
+
+.overview_rightText{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.overview_rightText>.text{
+  width:70%;
+  margin:0 auto;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.picLevels{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.pics{
+  margin-top: 2rem;
+  width: 18rem;
+}
+
+.carasoul{
+  width:100%;
+  align-items: center;
+}
+.carasoul >img{
+  display: block;
+  margin: 0 auto;
+  width:90%;
+}
+
+.map-img{
+  display: block;
+  height: 30rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.map{
+  width:100%;
+  height: 100vh;
+}
+
+.accordion_section{
+  width: 95%;
+  margin: 0 auto;
+}
+.accordion-body{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.accordion-body:hover{
+  color: blueviolet;
+}
+
+
+/* CSS for Modal */
+
+.enquery-form{
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+}
+
+.enquery-form>input[type="text"]{
+  padding: 1px;
+}
+.enquery-form>input[type="number"]{
+  padding: 1px;
+}
+
+.enquery-form>input:hover{
+   border: 1px solid turquoise;
+   border-radius:0.2rem;
+}
+.enquery-form>input::placeholder{
+  color: blueviolet;
+}
+
+.floating_section{
+  position: fixed;
+  bottom: 30px;
+  right: 18px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 50px;
+  height: 40px;
+  z-index: 1001;
+  width: 40px;
+  box-shadow: 2px 2px 7px 0px rgb(0 0 0 / 40%);
+  -webkit-transition: all .5s;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* modal styles ends here */
+
+
+
+@media(min-width:760px){
+  .overview_text{
+    font-size: 4rem;
+  }
+}
+
+@media(max-width:768px){
+  .light-bg{
+    background: rgba(0,0,0,0);
+    padding: 0%;
+  }
+  .navbar{
+    overflow: visible;
+    width: 100%;
+    position: relative;
+  }
+  #navbarNav{
+    position: absolute;
+    z-index: 1;
+    top:4rem;
+  }
+  
+  .front-center-text {
+    position: relative;
+  }
+
+  .price-location{
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:start;
+    width:90%;
+    margin: 0;
+  }
+  .middle{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-top: 1.2rem;
+  }
+  .middle>div{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 800;
+  }
+  
+  .middle-img{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+  }
+
+  .overview_leftPic{
+    width:100%;
+    height: 100%;
+  }
+  .overview_text{
+    display: none;
+  }
+  .map{
+    width:100%;
+    height: 20rem;
+  }
 }
